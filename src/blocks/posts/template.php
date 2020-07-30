@@ -16,6 +16,9 @@
 	<?php if ( $query->have_posts() ) : ?>
 		<?php while ( $query->have_posts() ) : ?>
 			<?php $query->the_post(); ?>
+			<header class="c-entry__header">
+				<?php the_title( '<h1>', '</h1>' ); ?>
+			</header>
 			<?php the_content(); ?>
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
